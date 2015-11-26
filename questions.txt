@@ -1,0 +1,23 @@
+0.  The longest word printed in a circulated dictionary. Means to get lung disease by inhaling fine particals.  
+1.  Returns  resource usage measures for who - rusage_self rusage_children rusage_thread
+2.  16
+3.  Because they are going to be changing throughout the program based on what thread is running.
+    The amount of resource required before invoking the function is subtracted from the amount of resources needed
+    after invoking. 
+4.  The main loop of the program is a for loop on starting on line 76. It begins by pulling in the first 
+    character of the text. The character is checked if it's a letter or apostrophe, if so its added to the word array.
+    If the index (word length) is longer than LENGTH, ignore it. If the character is a digit, we ignore that too.
+    Once we find ourselves at a full word, we terminate it with a \0. Word counter is updated, word is checked for
+    misspellings. If we find one, print it. 
+5.  fscanf isn't used here because we need to check each character to see if it is a lowercase letter, and not a number..
+    Since we need to check each char anyway, its double the work to make it a string first, then check individual letters. 
+6.  For the most part, those values are not going to change. word is always going to be 1 more space then the largest words
+    character count. Load will use the default dictionary unless use specifies to use another. 
+7.  I used the SDBM hash method in order to get a value for each of my words. The method goes through each letter of the string
+    and determines a location for it, putting the rest of the letter adjacent. When I was looking for a method to use
+    this one seemed to fit my needs of few conflicts and massive speed. Not very secure however. 
+8.  The first time I ran my code with a 1d array using the small dictionary. When I tried to use the larger dictionary, things
+    didn't go well. I'm not sure exactly on the loadtime but it was too long. 
+9.  Reworked the loading function so it brings the strings in as hash values making traversing the data a lot more simple.
+10. After getting the loading function down to a very quick load time, the rest didn't seem as difficult to do the same with. 
+    The loading was the most difficult part of this problem set. 
